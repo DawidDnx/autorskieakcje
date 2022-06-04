@@ -40,7 +40,10 @@ module.exports = {
   
   <br><br><br>
   
-  <store-in-variable style="padding-top: 8px;" dropdownLabel="Store In" selectId="storage" variableContainerId="varNameContainer" variableInputId="varName" selectWidth="40%" variableInputWidth="55%"></store-in-variable>`;
+  <store-in-variable style="padding-top: 8px;" dropdownLabel="Store In" selectId="storage" variableContainerId="varNameContainer" variableInputId="varName" selectWidth="40%" variableInputWidth="55%"></store-in-variable>
+  <br><br><br><br><br><br><br>
+  <p>Jeżeli ci nie działa napisz do mnie w wiadomośći prywatnej!</p>`
+  ;
     },
   
   
