@@ -56,7 +56,7 @@ module.exports = {
 
 
 
-  fields: ["storage", "varName", "information", "server", "varName2", "info", "member", "varName3", "info2"],
+  fields: ["storage", "varName", "server", "varName2", "member", "varName3", "information", "info", "info2"],
 
 
 
@@ -65,15 +65,16 @@ module.exports = {
 
 
 <store-in-variable dropdownLabel="Store In" selectId="storage" variableContainerId="varNameContainer2" variableInputId="varName"></store-in-variable>
-<br><br><br><br>
+<br><br><br>
+<member-input dropdownLabel="Source Member" selectId="member" variableContainerId="varNameContainer" variableInputId="varName"></member-input>
+<br><br><br>
+<server-input dropdownLabel="Server" selectId="server" variableContainerId="varNameContainer" variableInputId="varName2"></server-input><br>
+<br><br>
 
 <tab-system exclusiveTabData spreadOut id="information">
   <tab label="Server Info" icon="sort alphabet down">
     <div style="padding: 8px;">
       <div style="float: left; width: calc(100% - 12px);">
-        <server-input dropdownLabel="Server" selectId="server" variableContainerId="varNameContainer" variableInputId="varName2"></server-input><br>
-
-        <br><br>
 
         <span class="dbminputlabel">Info</span><br>
         <select id="info" class="round">
@@ -89,9 +90,6 @@ module.exports = {
   <tab label="Member Info" icon="assistive listening systems">
     <div style="padding: 8px;">
       <div style="float: left; width: calc(100% - 12px);">
-      <member-input dropdownLabel="Source Member" selectId="member" variableContainerId="varNameContainer" variableInputId="varName"></member-input>
-
-        <br><br><br>
 
         <span class="dbminputlabel">Info</span><br>
         <select id="info2" class="round">
