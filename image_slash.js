@@ -4,7 +4,7 @@ module.exports = {
     name: "Find Slash Image",
   
   
-    section: "Discord Bot Poland",
+    section: "Discord Bots Poland",
   
 
   
