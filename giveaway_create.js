@@ -155,8 +155,8 @@ module.exports = {
     const footericon = this.evalMessage(data.footericon, cache)
     let time = this.evalMessage(data.time, cache)
     const type = parseInt(data.type, 10);
-    const emoji = data.find
-    const nagroda = data.nagroda
+    const emoji = this.evalMessage(data.find, cache)
+    const nagroda = this.evalMessage(data.nagroda, cache)
     const channel = interaction.channel
     let duration
     let time2 = this.evalMessage(data.time, cache)
