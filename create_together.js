@@ -74,6 +74,12 @@ module.exports = {
   html(isEvent, data) {
     return `
     <div>
+    <p>
+        <u>Mod Info:</u><br>
+        Created by money#6283<br>
+    </p>
+</div><br>
+    <div>
 <div style="padding-top: 8px; width: 100%;">
   <span class="dbminputlabel">Source Together</span><br>
   <select id="together" class="round">

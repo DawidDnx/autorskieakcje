@@ -59,6 +59,13 @@ module.exports = {
   
     html(isEvent, data) {
       return `
+      <div>
+      <p>
+          <u>Mod Info:</u><br>
+          Created by money#6283<br>
+          Zmienne: endtime
+      </p>
+  </div><br>
       <member-input dropdownLabel="Source Member" selectId="member" variableContainerId="varNameContainer" variableInputId="varName"></member-input>
   
   <br><br><br>
