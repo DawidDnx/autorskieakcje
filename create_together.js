@@ -48,7 +48,7 @@ module.exports = {
   // This will make it so the patch version (0.0.X) is not checked.
   //---------------------------------------------------------------------
 
-  meta: { version: "2.1.5", preciseCheck: true, author: 'Gotowka', authorUrl: 'https://github.com/Gotowka/dbmmody/blob/main/beta/create_together.js', downloadUrl: 'https://github.com/Gotowka/dbmmody/blob/main/beta/create_together.js' },
+  meta: { version: "2.1.6", preciseCheck: true, author: 'Gotowka', authorUrl: 'https://github.com/Gotowka/dbmmody/blob/main/beta/create_together.js', downloadUrl: 'https://github.com/Gotowka/dbmmody/blob/main/beta/create_together.js' },
 
   //---------------------------------------------------------------------
   // Action Fields
@@ -94,6 +94,9 @@ module.exports = {
     <option value="wordsnack">Wordsnack</options>
     <option value="awkword">Awkword</options>
     <option value="lettertile">Letter League</options>
+    <option value="puttparty">Putt Party</options>
+    <option value="bobble">Bobble League</options>
+    <option value="landio">Landio.io</options>
   </select>
 </div>
 </div>
