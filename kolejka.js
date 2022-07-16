@@ -133,20 +133,6 @@ module.exports = {
 
       const currentSong = queue.current
 
-      await interaction.reply({
-          embeds: [
-              new MessageEmbed()
-                  .setDescription(`**Aktualnie gram**\n` + 
-                  (currentSong ? `\`[${currentSong.duration}]\` ${currentSong.title} - ${currentSong.requestedBy.tag}` : "None") +
-                  `\n\n**Queue**\n${queueString}`
-                  )
-                  .setFooter({
-                      text: `Strona ${page + 1}/${totalPages}`
-                  })
-                  .setThumbnail(currentSong.setThumbnail)
-          ]
-  }   )
-
      this.storeValue(currentSong.duration, 1, 'duration', cache);
      this.storeValue(currentSong.title, 1, 'title', cache);
      this.storeValue(currentSong.requestedBy.tag, 1, 'author', cache);
