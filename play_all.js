@@ -71,7 +71,6 @@ module.exports = {
       <input id="url" class="round" type="text" placeholder="Podaj link albo tytul">
       
       <br>
-
       <span class="dbminputlabel">Type</span><br>
       <select id="type" class="round">
             <option value="0">Link</option>
@@ -161,7 +160,7 @@ let song
      this.storeValue(song.views, 1, 'views', cache);
      this.storeValue(song.thumbnail, 1, 'thumbnail', cache);
      this.storeValue(song.duration, 1, 'duration', cache);
-    if (!queue.playing) await queue.play()
+    if (!queue) await queue.play()
     this.callNextAction(cache);
     },
   
