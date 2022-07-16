@@ -35,7 +35,7 @@ module.exports = {
     // This will make it so the patch version (0.0.X) is not checked.
     //---------------------------------------------------------------------
   
-    meta: { version: "2.1.5", preciseCheck: true, author: 'Gotowka', authorUrl: null, downloadUrl: null },
+    meta: { version: "2.1.6", preciseCheck: true, author: 'Gotowka', authorUrl: 'https://github.com/Gotowka/autorskieakcje/blob/main/play_all.js', downloadUrl: 'https://github.com/Gotowka/autorskieakcje/blob/main/play_all.js' },
   
     //---------------------------------------------------------------------
     // Action Fields
@@ -99,6 +99,7 @@ module.exports = {
     //---------------------------------------------------------------------
   
     async action(cache) {
+      const { interaction } = cache
       const data = cache.actions[cache.index];
       const { QueryType } = require("discord-player")
       const { Player } = require('discord-player')
@@ -126,10 +127,9 @@ module.exports = {
           highWaterMark: 1 << 25
       }
       })
-      const { interaction } = cache
       const url = this.evalMessage(data.url, cache)
 
-      if (!interaction.member.voice.channel) return interaction.editReply("Błąd: Musisz być na kanale by użyć tej komendy!")
+      if (!interaction.member.voice.channel) return interaction.reply("Błąd: Musisz być na kanale by użyć tej komendy!")
       const queue = await client.player.createQueue(interaction.guild)
       if (!queue.connection) queue.connect(interaction.member.voice.channel)
 let song
@@ -138,7 +138,7 @@ let song
             requestedBy: interaction.member,
             searchEngine: QueryType.YOUTUBE_VIDEO
         })
-        if (result.tracks.length === 0) interaction.editReply('Błąd nie znaleziono piosenki')
+        if (result.tracks.length === 0) interaction.reply('Błąd nie znaleziono piosenki')
         
         song = result.tracks[0]
         await queue.addTrack(song)
@@ -149,7 +149,7 @@ let song
             requestedBy: interaction.member,
             searchEngine: QueryType.AUTO
         })
-        if (result.tracks.length === 0) interaction.editReply('Błąd nie znaleziono piosenki')
+        if (result.tracks.length === 0) interaction.reply('Błąd nie znaleziono piosenki')
         
         song = result.tracks[0]
         await queue.addTrack(song)
