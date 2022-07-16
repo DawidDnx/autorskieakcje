@@ -117,7 +117,7 @@ module.exports = {
       const url = this.evalMessage(data.url, cache)
 
       if (!interaction.member.voice.channel) return interaction.reply("Błąd: Musisz być na kanale by użyć tej komendy!")
-      const queue = client.player.getQueue(interaction.guild.id)
+      const queue = client.player.getQueue(interaction.guild)
       if (!queue || !queue.playing){
         return interaction.reply("Błąd: Nie ma piosenek w kolejce")
     }
