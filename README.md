@@ -1,6 +1,6 @@
 # zmienne
 
-# kolejka
+# [Kolejka](https://github.com/Gotowka/autorskieakcje/blob/main/kolejka.js)
 
 - duration (czas trwania aktualnej piosenki)
 - title (tytul aktualnej piosenki)
