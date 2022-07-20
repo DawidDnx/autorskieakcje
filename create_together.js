@@ -97,6 +97,8 @@ module.exports = {
     <option value="puttparty">Putt Party</options>
     <option value="bobble">Bobble League</options>
     <option value="landio">Landio.io</options>
+    <option value="meme">Know What I Meme</options>
+    <option value="away">Ask Away</options>
   </select>
 </div>
 </div>
