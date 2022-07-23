@@ -160,8 +160,7 @@ let song
      this.storeValue(song.views, 1, 'views', cache);
      this.storeValue(song.thumbnail, 1, 'thumbnail', cache);
      this.storeValue(song.duration, 1, 'duration', cache);
-     const queue2 = await client.player.getQueue(interaction.guild)
-    if (!queue2) await queue.play()
+     if (queue.playing === false) await queue.play()
     this.callNextAction(cache);
     },
   
