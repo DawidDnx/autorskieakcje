@@ -64,7 +64,7 @@ module.exports = {
       if (!musicplayer) return console.log(`BŁĄD - Zaaktualizuj plik bot.js, https://github.com/Gotowka/autorskieakcje/blob/main/bot/bot.js`);
 
       if (!interaction.member.voice.channel) return interaction.reply("Błąd: Musisz być na kanale by użyć tej komendy!")
-      const queue = musicplayer.getQueue(interaction.guildId)
+      const queue = musicplayer.getQueue(interaction.guild)
 
       if (!queue) return await interaction.reply("Błąd: Nie ma piosenek w kolejce")
 
