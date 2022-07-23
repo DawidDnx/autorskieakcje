@@ -90,34 +90,11 @@ module.exports = {
     async action(cache) {
       const { interaction } = cache
       const data = cache.actions[cache.index];
-      const { Player } = require('discord-player')
-      const { Client, Intents } = require('discord.js')
-      const client = new Client({ intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MESSAGES,
-        Intents.FLAGS.GUILD_MEMBERS,
-        Intents.FLAGS.GUILD_INVITES,
-        Intents.FLAGS.GUILD_BANS,
-        Intents.FLAGS.GUILD_INVITES,
-        Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS,
-        Intents.FLAGS.GUILD_VOICE_STATES,
-        Intents.FLAGS.GUILD_MESSAGE_REACTIONS
-      ], partials: [
-        "MESSAGE",
-        "CHANNEL",
-        "GUILD_MEMBER",
-        "REACTION"
-      ]});
-      client.player = new Player(client, {
-      ytdlOptions: {
-          quality: "highestaudio",
-          highWaterMark: 1 << 25
-      }
-      })
-      const url = this.evalMessage(data.url, cache)
+      const { musicplayer } = require('../bot.js')
+      if (!musicplayer) return console.log(`BŁĄD - Zaaktualizuj plik bot.js, https://github.com/Gotowka/autorskieakcje/blob/main/bot/bot.js`);
 
       if (!interaction.member.voice.channel) return interaction.reply("Błąd: Musisz być na kanale by użyć tej komendy!")
-      const queue = client.player.getQueue(interaction.guild)
+      const queue = musicplayer.getQueue(interaction.guild)
       if (!queue || !queue.playing){
         return interaction.reply("Błąd: Nie ma piosenek w kolejce")
     }
