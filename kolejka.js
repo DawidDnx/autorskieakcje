@@ -99,7 +99,7 @@ module.exports = {
         return interaction.reply("Błąd: Nie ma piosenek w kolejce")
     }
       const totalPages = Math.ceil(queue.tracks.length / 10) || 1
-      const page = (interaction.options.getNumber(data.page) || 1) - 1
+      const page = (interaction.options.getInteger(data.page) || 1) - 1
 
       if (page > totalPages) 
           return await interaction.reply(`Błąd: Istnieją tylko ${totalPages} strony`)
