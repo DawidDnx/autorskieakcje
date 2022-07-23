@@ -22,7 +22,7 @@ module.exports = {
     //---------------------------------------------------------------------
   
     subtitle(data, presets) {
-      return `${data.url}`;
+      return `Poznaj kolejke piosenek`;
     },
   
     variableStorage(data, varType) {
