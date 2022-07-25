@@ -236,7 +236,7 @@ module.exports = {
         },
    
      
-       meta: { version: "2.1.6", preciseCheck: true, author: 'Gotowka', authorUrl: 'https://github.com/Gotowka/autorskieakcje/blob/main/radio.js', downloadUrl: 'https://github.com/Gotowka/autorskieakcje/blob/main/radio.js' },
+       meta: { version: "2.1.6", preciseCheck: true, author: 'Gotowka, Hit Stary', authorUrl: 'https://github.com/Gotowka/autorskieakcje/blob/main/radio.js', downloadUrl: 'https://github.com/Gotowka/autorskieakcje/blob/main/radio.js' },
    
        fields: ["channel", "varName", "type"],
      
@@ -487,10 +487,10 @@ module.exports = {
        init() {},
      
        async action(cache) {
-           const { interaction, msg } = cache
-           const { MessageEmbed } = require('discord.js')
+           const { interaction } = cache
            const data = cache.actions[cache.index];
            const Audio = this.getDBM().Audio;
+           const { MessageEmbed } = require('discord.js')
            const channel = await this.getVoiceChannelFromData(data.channel, data.varName, cache);
            if (!interaction.member.voice.channel) return interaction.reply("Błąd: Musisz być na kanale by użyć tej komendy!")
            let url
@@ -499,79 +499,79 @@ module.exports = {
            case 0:
                url = 'https://rs6-krk2.rmfstream.pl/RMFFM48'
                radio = 'Rmf Fm'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/LqyrhDv.png'
                strona = 'https://www.rmfon.pl/play,5#p'
                break;
            case 1:
                url = 'https://rs6-krk2.rmfstream.pl/RMFMAXXX48'
                radio = 'Rmf Maxxx'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/ze1tkOU.png'
                strona = 'https://www.rmfon.pl/play,6#p'
                break;
            case 2:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/DANCE'
                radio = 'Rmf Dance'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/KVTC4ei.jpg'
                strona = 'https://www.rmfon.pl/play,3#p'
                break;
            case 3:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/CLUB'
                radio = 'Rmf Club'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/DraLw63.png'
                strona = 'https://www.rmfon.pl/play,29#p'
                break;
            case 4:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/FITNESS'
                radio = 'Rmf Fitness'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/XVeDisJ.png'
                strona = 'https://www.rmfon.pl/play,117#p'
                break;
            case 5:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/HOPBEC'
                radio = 'Rmf Hop'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/KJ7N98V.jpg'
                strona = 'https://www.rmfon.pl/play,22#p'
                break;
            case 6:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/PARTY'
                radio = 'Rmf Party'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/7M07JVG.jpg'
                strona = 'https://www.rmfon.pl/play,23#p'
                break;
            case 7:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/WPRACY'
                radio = 'Rmf Praca'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/MjMVZE2.jpg'
                strona = 'https://www.rmfon.pl/play,115#p'
                break;
            case 8:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/DISCO'
                radio = 'Rmf Disco'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/ugDGbzh.png'
                strona = 'https://www.rmfon.pl/play,153#p'
                break;
            case 9:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/HOTNEW'
                radio = 'Rmf Hot'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/aVkp91F.jpg'
                strona = 'https://www.rmfon.pl/play,27#p'
                break;
            case 10:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/DISCOPOLO'
                radio = 'Rmf Discopolo'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/s4GcPLH.jpg'
                strona = 'https://www.rmfon.pl/play,110#p'
                break;
            case 11:
                url = 'https://rs203-krk.rmfstream.pl/SPRZEBOJE'
                radio = 'Rmf Przeboje'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/talT5P5.jpg'
                strona = 'https://www.rmfon.pl/play,10#p'
                break;
            case 12:
                url = 'https://rs202-krk-cyfronet.rmfstream.pl/TOP5DANCE'
                radio = 'Rmf Top'
-               img = 'https://cdn.onlineradiobox.com/img/l/3/1313.v14.png'
+               img = 'https://i.imgur.com/ugDGbzh.png'
                strona = 'https://www.rmfon.pl/play,119#p'
                break;
            case 13:
@@ -1874,6 +1874,7 @@ module.exports = {
              .setDescription(`Słuchasz aktualnie stacji [${radio}](${strona})`)
              .setThumbnail(img)
              if (interaction) interaction.reply({ embeds: [embed] }) 
+     
          this.callNextAction(cache);
          },
      
